@@ -1,0 +1,47 @@
+# 供 chibios_hwdef.py 处理的硬件定义文件
+# 适用于 物唯科技（WWKJ）WFG120 硬件
+
+# MCU 系列及具体型号
+MCU STM32H7xx STM32H743xx
+
+# 固件加载用的板级 ID
+APJ_BOARD_ID 253
+
+# 外部晶振频率
+OSCILLATOR_HZ 8000000
+
+# Flash 容量大小
+FLASH_SIZE_KB 2048
+
+# Bootloader 安装在 Flash 起始地址
+FLASH_RESERVE_START_KB 0
+
+# Bootloader 加载固件的地址偏移
+FLASH_BOOTLOADER_LOAD_KB 128
+
+# 串口顺序（包括 USB）
+SERIAL_ORDER OTG1 USART1
+
+# USB 接口
+PA11 OTG_FS_DM OTG1
+PA12 OTG_FS_DP OTG1
+
+# USART1 串口
+PA9  USART1_TX USART1
+PA10 USART1_RX USART1
+
+# SWD 调试接口引脚
+PA13 JTMS-SWDIO SWD
+PA14 JTCK-SWCLK SWD
+
+# 片选（CS）引脚
+PA4  AT7456E_CS      CS
+PD4  IMU1_CS         CS
+PB12 IMU2_CS         CS
+PE10 IMU3_CS         CS
+
+
+# LED 指示灯
+PE2 LED_ACTIVITY   OUTPUT LOW # 绿色
+PE4 LED_BOOTLOADER OUTPUT LOW # 蓝色
+define HAL_LED_ON 0

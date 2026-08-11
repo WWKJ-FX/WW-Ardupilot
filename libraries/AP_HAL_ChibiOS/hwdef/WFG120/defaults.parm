@@ -1,0 +1,5 @@
+# custom defaults for wfg120 board
+# COMPASS_AUTO_ROT 0
+
+# Board orientation: Yaw270Roll180
+AHRS_ORIENTATION 14
